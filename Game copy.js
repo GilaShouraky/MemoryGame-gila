@@ -95,7 +95,7 @@ function restart() {
   })
   document.getElementById("myElement").style.display = "none"
   document.getElementById("Element").style.display = "none"
-  countdown(1.5)
+  countdown(1)
 }
 
 function countdown(minutes) {
@@ -112,4 +112,4 @@ function countdown(minutes) {
   }, 1000);
 }
 
-countdown(1.5);
+countdown(1);
