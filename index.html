@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>memory game</title>
+    <title>memory game gila shouraky</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -13,16 +15,47 @@
         <h1>משחק זיכרון לחנוכה</h1>
     </div>
     <div class="container">
+        <div class="Win" id="myElement">כל <br>!!!הכבוד<br> <button class="newgame" onclick="restart()">New
+                Game</button></div>
+        <div class="Loss" id="Element">המשחק <br> !נגמר <br> <button class="newgame" onclick="restart()">New
+                Game</button></div>
         <div class="board ">
-            <div class="Win" id="myElement">כל <br> הכבוד!!! <br> <button class="newgame" onclick="restart()">New Game</button></div>
-            <div class="Loss" id="Element">המשחק <br> נגמר! <br> <button class="newgame" onclick="restart()">New Game</button></div>
         </div>
         <div class="board2">
-            <h1>!!חנוכה שמח</h1> <br>
-            <h3>שם: גילה</h3> <br>
-            <h3 id="time"></h3> <br>
+            <div class="form">
+                <form action="">
+                    <div class="level">בחר רמת משחק</div>
+                    <label for="level" </label>
+                        <select class="choose" name="level" id="level" required
+                            onchange="handleLevelChange(this.value)">
+                            <option value="choose">בחר/י</option>
+                            <option value="10">קל - 10 כרטיסים</option>
+                            <option value="20">בינוני - 20 כרטיסים</option>
+                            <option value="30">קשה - 30 כרטיסים</option>
+                        </select>
+                </form>
+            </div>
+            <div>
+                <h1>!!חנוכה שמח</h1> <br>
+                <h3>שם: גילה</h3> <br>
+                <h3 id="time"></h3> <br>
+            </div>
             <div>
                 <button class="actions" onclick="restart()">Restart</button>
+            </div>
+            <div>
+                <audio controls id="audio">
+                    <source src="Correct Answer sound effect.mp3" type="audio/mp3">
+                </audio>
+                <audio controls id="audio2">
+                    <source src="מנגינה שמחה11.mp3" type="audio/mp3">
+                </audio>
+                <audio controls id="audio3">
+                    <source src="מחיאות כפיים.mp3" type="audio/mp3">
+                </audio>
+                <audio controls id="audio4">
+                    <source src="תשובה שגויה.mp3" type="audio/mp3">
+                </audio>
             </div>
         </div>
     </div>
